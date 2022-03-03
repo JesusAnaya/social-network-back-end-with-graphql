@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     # Third party apps
     'graphene_django',
+    'thumbnails',
 
     # Local apps
     'graphql_api',
@@ -126,6 +127,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Media files
+MEDIA_URL = config('MEDIA_URL', default='')
+MEDIA_ROOT = config('MEDIA_ROOT', default='')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
@@ -160,7 +165,7 @@ THUMBNAILS = {
         },
         'large': {
             'PROCESSORS': [
-                {'PATH': 'thumbnails.processors.resize', 'width': 20, 'height': 20},
+                {'PATH': 'thumbnails.processors.resize', 'width': 514, 'height': 506},
                 {'PATH': 'thumbnails.processors.flip', 'direction': 'horizontal'}
             ],
         },
