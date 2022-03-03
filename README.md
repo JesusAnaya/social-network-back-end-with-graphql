@@ -10,7 +10,6 @@ This project is a demo of a Django service with Graphql to create simple social 
 - The services is pointing to the url `http://localhost:8000/`.
 
 ### Run this project using docker-compose:
-- Enter to the docker directory `cd docker`.
 - Run `docker-compose build` to create the docker image.
 - Run the current migrations `docker-compose run web_service python manage.py migrate`.
 - Add a superuser `docker-compose run web_service python manage.py createsuperuser`.

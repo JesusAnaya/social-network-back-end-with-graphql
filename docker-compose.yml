@@ -5,12 +5,12 @@ services:
     container_name: socialnetwork-backend-demo
     image: socialnetwork-backend-demo:latest
     build:
-      context: ../
-      dockerfile: docker/Dockerfile
+      context: .
+      dockerfile: Dockerfile
     volumes:
-      - ../:/code:cached
+      - .:/code:cached
     command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
     ports:
       - "8000:8000"
     env_file:
-      - ../.env
+      - .env
