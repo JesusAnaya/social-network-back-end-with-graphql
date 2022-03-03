@@ -16,4 +16,4 @@ COPY Pipfile Pipfile.lock /code/
 
 RUN pipenv install --deploy --system
 
-COPY ./web_service /code/
+COPY . /code/
