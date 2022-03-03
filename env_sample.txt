@@ -1,0 +1,4 @@
+# copy this file and rename it as .env in the root path
+
+SECRET_KEY=<generate a random aphanumeric key here>
+DEBUG=True
