@@ -6,7 +6,11 @@ ENV PYTHONFAULTHANDLER 1
 
 # Install pipenv and compilation dependencies
 RUN pip install pipenv
-RUN apt-get update && apt-get install -y --no-install-recommends gcc
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends gcc
+RUN apt-get install -y libtiff5-dev libjpeg62-turbo-dev libopenjp2-7-dev zlib1g-dev
+RUN apt-get install -y libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python3-tk
+RUN apt-get install -y libharfbuzz-dev libfribidi-dev libxcb1-dev
 
 RUN mkdir /code
 WORKDIR /code
